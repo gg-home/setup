@@ -1,3 +1,23 @@
+## Transmission
+TODO: Convert to a docker
+Download and install Transmission. Configure the following:
+
+1. Stop the Transmission service and exit the QT client app
+2. Wait couple of seconds...
+3. Open and edit the following file: C:\Windows\ServiceProfiles\LocalService\AppData\Local\transmission-daemon\settings.json
+=> `"rpc-whitelist-enabled": false`
+=> `"rpc-host-whitelist-enabled": false`
+5. Start the service
+6. Verify that the settings are the still the same as you have entered them a moment ago. If not go to 1.
+
+Configure paths:
+"download-dir": "T:\\etc\\transmission",
+"watch-dir": "T:\\Downloads",
+"incomplete-dir": "T:\\etc\\transmission-downloading",
+"incomplete-dir-enabled": true,
+
+https://github.com/transmission/transmission/issues/226#issuecomment-832206400
+
 # Docker containers
 
 This setup is based on Windows10 and Docker for Windows. 
