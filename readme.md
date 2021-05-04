@@ -31,4 +31,4 @@ By default all apps use the drive `T:\etc` as base directory for volumes or any 
 `docker run --restart=always -d -e RABBITMQ_NODENAME=ggh --name ggh-rabbitmq -p 1883:1883 -p 8883:8883 -p 15672:15672 -p 5672:5672 gghome/rabbitmq-mqtt`
 
 ## install couchpotato
-`docker run -d --name=couchpotato -e PUID=1000 -e PGID=1000 -e TZ=Europe/Sofia -p 5050:5050 -v "T:\etc\couchpotato":/config -v "T:\etc\couchpotato\downloads":/downloads -v "D:\Media\movies":/movies --restart unless-stopped ghcr.io/linuxserver/couchpotato`
+`docker run -d --name=couchpotato -e PUID=1000 -e PGID=1000 -e TZ=Europe/Sofia -p 5050:5050 -v "T:\etc\couchpotato":/config -v "T:\etc\couchpotato\downloads":/downloads -v "D:\Media":/media --restart unless-stopped ghcr.io/linuxserver/couchpotato`
