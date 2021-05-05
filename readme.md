@@ -34,4 +34,4 @@ By default all apps use the drive `T:\etc` as base directory for volumes or any 
 `docker run -d --name=transmission -e PUID=1000 -e PGID=1000 -e TZ=Europe/Sofia -p 9091:9091 -p 51413:51413 -p 51413:51413/udp -v "T:\etc\transmission2\config":/config -v "T:\etc\transmission2\downloads":/downloads -v "T:\etc\transmission2\watch":/watch --restart unless-stopped linuxserver/transmission:latest`
 
 ## install couchpotato
-`docker run -d --name=couchpotato -e PUID=1000 -e PGID=1000 -e TZ=Europe/Sofia -p 5050:5050 -v "T:\etc\couchpotato":/config -v "T:\etc\transmission2\watch":/downloads -v "D:\Media":/media --restart unless-stopped ghcr.io/linuxserver/couchpotato`
+`docker run -d --name=couchpotato -e PUID=1000 -e PGID=1000 -e TZ=Europe/Sofia -p 5050:5050 -v "T:\etc\couchpotato":/config -v "T:\etc\transmission2\watch":/downloads -v "D:\Media":/media --restart unless-stopped linuxserver/couchpotato:latest`
